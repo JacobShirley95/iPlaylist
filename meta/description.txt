@@ -1,0 +1,5 @@
+This extension was born out of the need to watch BBC iPlayer shows in sequence, rather than having to manually change which show to watch next. 
+
+At the moment it's pretty basic: you can visit any show on the BBC iPlayer website and add it to a playlist; you can have multiple playlists, however, only one playlist can be played at a time; adding and deleting of items in a playlist; and forwards and backwards  control buttons.
+
+Future additions may include: universal playlist functionality, which would include being able to add media from YouTube, ITV, Channel 4, etc; playing of the "Add to Playlist" button in other pages of the BBC iPlayer website; restyling of the theme (it's pretty basic right now); more controls buttons; and more.

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chrome Plugin</title>
+
+		<link rel="stylesheet" type="text/css" href="lib/jquery-ui-themes/themes/smoothness/
+		jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+		<script src="lib/jquery.min.js"></script>
+		<script src="lib/jquery-ui/jquery-ui.min.js"></script>
+
+		<script src="src/shared/playlist.js"></script>
+		<script src="popup.js"></script>
+	</head>
+	<body>
+		<div id="tabs">
+			<ul id="tab-bar">
+				<li><a id="tab-adder" href="#tab-add">+</a></li>
+			</ul>
+			<div id="tab-add"></div>
+		</div>
+		<div>
+			<div id="playlist-controls" class="ui-widget ui-widget-content ui-corner-all">
+				<div id="current-media">
+					Current:
+				</div>
+				<div id="play-stop-controls">
+					<button id="prev">
+						<span class='ui-icon ui-icon-seek-prev delete-item'></span>
+					</button>
+					<button id="play">
+						<span class='ui-icon ui-icon-play delete-item'></span>
+					</button>
+					<button id="stop">
+						<span class='ui-icon ui-icon-stop delete-item'></span>
+					</button>
+					<button id="next">
+						<span class='ui-icon ui-icon-seek-next delete-item'></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
