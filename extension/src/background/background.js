@@ -41,9 +41,9 @@ chrome.runtime.onMessage.addListener(
 					} else if (type == "playlistEnded") {
 						chrome.storage.sync.set({'playlists': playlists});
 
-						if (currentIndex < playlists[currentPlaylist].items.length) {
+						if (playerState.itemIndex < currentPlaylist.items.length) {
 							playerState.itemIndex++;
-							selectMedia(playlists[currentPlaylist], currentIndex);
+							selectMedia(currentPlaylist, playerState.itemIndex);
 						} else {
 							playerState.state = STATE_STOPPED;
 						}

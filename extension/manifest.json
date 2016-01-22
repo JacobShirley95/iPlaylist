@@ -3,7 +3,7 @@
 
   "name": "BBC iPlayer Playlists",
   "description": "Allows the adding of videos to form an iPlayer playlist",
-  "version": "1.0",
+  "version": "1.0.0.1",
 
   "icons": {
     "48": "assets/logo/logo.png"
