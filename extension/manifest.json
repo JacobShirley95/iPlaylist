@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "BBC iPlayer Playlists",
-  "description": "Allows the adding of videos to form an iPlayer playlist",
+  "description": "Allows adding videos from the BBC iPlayer website to a playlist",
   "version": "1.0.0.1",
 
   "icons": {
@@ -11,8 +11,7 @@
 
   "permissions": [
     "tabs", "<all_urls>",
-    "storage",
-    "webNavigation"
+    "storage"
   ],
 
   "browser_action": {

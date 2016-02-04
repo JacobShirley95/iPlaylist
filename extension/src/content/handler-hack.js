@@ -1,21 +1,37 @@
 var _handle = window.embeddedMedia.handle;
 
-while (typeof _handle === "undefined") {
-	_handle = window.embeddedMedia.handle;
+var stop = false;
+
+setTimeout(loop, 1000);
+
+function loop() {
+	if (!stop) {
+		findHandle();
+		setTimeout(loop, 1000);
+	}
 }
 
-var info = document.createElement("div");
-window.embeddedMedia.handle = function(ev, data) {
-	//console.log(data);
+function findHandle() {
+	_handle = window.embeddedMedia.handle;
+	if (!(typeof _handle === "undefined")) {
+		stop = true;
 
-	var nData = {
-		"type": "player-info",
-		"player-data": data,
-	};
+		var info = document.createElement("div");
+		window.embeddedMedia.handle = function(ev, data) {
+			//console.log(data);
 
-	_handle(ev, data);
+			var nData = {
+				"type": "player-info",
+				"player-data": data,
+			};
 
-	var event = new CustomEvent("handler-hack", {"detail": {"id": "content/handler-hack", "data": nData}});
+			_handle(ev, data);
 
-	document.dispatchEvent(event);
-};
+			var event = new CustomEvent("handler-hack", {"detail": {"id": "content/handler-hack", "data": nData}});
+
+			document.dispatchEvent(event);
+		}
+	}
+}
+
+findHandle();

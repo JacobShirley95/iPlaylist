@@ -137,9 +137,6 @@ function selectMedia(playlist, i) {
 	
 	var url = "http://www.bbc.co.uk"+item.url;
 
-	console.log(item);
-	console.log(item.url);
-
 	if (targetTab == -1) {
 		chrome.tabs.create({active:true, url: url}, function(tab) {
 			targetTab = tab.id;
